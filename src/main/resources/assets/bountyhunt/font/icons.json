@@ -1,0 +1,85 @@
+{
+ "providers": [
+  {
+   "type": "bitmap",
+   "file": "bountyhunt:font/icon/check.png",
+   "ascent": 8,
+   "height": 9,
+   "chars": [
+    "\ue000"
+   ]
+  },
+  {
+   "type": "bitmap",
+   "file": "bountyhunt:font/icon/cross.png",
+   "ascent": 8,
+   "height": 9,
+   "chars": [
+    "\ue001"
+   ]
+  },
+  {
+   "type": "bitmap",
+   "file": "bountyhunt:font/icon/swords.png",
+   "ascent": 8,
+   "height": 9,
+   "chars": [
+    "\ue002"
+   ]
+  },
+  {
+   "type": "bitmap",
+   "file": "bountyhunt:font/icon/door.png",
+   "ascent": 8,
+   "height": 9,
+   "chars": [
+    "\ue003"
+   ]
+  },
+  {
+   "type": "bitmap",
+   "file": "bountyhunt:font/icon/skull.png",
+   "ascent": 8,
+   "height": 9,
+   "chars": [
+    "\ue004"
+   ]
+  },
+  {
+   "type": "bitmap",
+   "file": "bountyhunt:font/icon/back.png",
+   "ascent": 8,
+   "height": 9,
+   "chars": [
+    "\ue005"
+   ]
+  },
+  {
+   "type": "bitmap",
+   "file": "bountyhunt:font/icon/reroll.png",
+   "ascent": 8,
+   "height": 9,
+   "chars": [
+    "\ue006"
+   ]
+  },
+  {
+   "type": "bitmap",
+   "file": "bountyhunt:font/icon/flag.png",
+   "ascent": 8,
+   "height": 9,
+   "chars": [
+    "\ue007"
+   ]
+  },
+  {
+   "type": "bitmap",
+   "file": "bountyhunt:font/icon/crown.png",
+   "ascent": 8,
+   "height": 9,
+   "chars": [
+    "\ue008"
+   ]
+  }
+ ]
+}

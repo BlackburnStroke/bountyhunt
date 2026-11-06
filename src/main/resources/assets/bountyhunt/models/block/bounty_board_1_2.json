@@ -1,0 +1,123 @@
+{
+ "parent": "minecraft:block/block",
+ "textures": {
+  "particle": "minecraft:block/dark_oak_planks",
+  "planks": "minecraft:block/dark_oak_planks",
+  "post": "minecraft:block/stripped_dark_oak_log",
+  "post_top": "minecraft:block/stripped_dark_oak_log_top",
+  "roof": "minecraft:block/spruce_planks",
+  "poster": "bountyhunt:block/wanted_poster"
+ },
+ "elements": [
+  {
+   "from": [
+    0,
+    0,
+    13
+   ],
+   "to": [
+    16,
+    16,
+    16
+   ],
+   "faces": {
+    "north": {
+     "texture": "#planks"
+    },
+    "south": {
+     "texture": "#planks"
+    },
+    "east": {
+     "texture": "#planks"
+    },
+    "west": {
+     "texture": "#planks"
+    },
+    "up": {
+     "texture": "#planks"
+    },
+    "down": {
+     "texture": "#planks"
+    }
+   }
+  },
+  {
+   "from": [
+    0,
+    13,
+    5
+   ],
+   "to": [
+    16,
+    16,
+    16
+   ],
+   "faces": {
+    "north": {
+     "texture": "#roof"
+    },
+    "south": {
+     "texture": "#roof"
+    },
+    "east": {
+     "texture": "#roof"
+    },
+    "west": {
+     "texture": "#roof"
+    },
+    "up": {
+     "texture": "#roof"
+    },
+    "down": {
+     "texture": "#roof"
+    }
+   }
+  },
+  {
+   "from": [
+    3,
+    2,
+    12
+   ],
+   "to": [
+    8,
+    10,
+    13
+   ],
+   "faces": {
+    "north": {
+     "uv": [
+      0,
+      0,
+      16,
+      16
+     ],
+     "texture": "#poster"
+    }
+   }
+  },
+  {
+   "from": [
+    10,
+    4,
+    12
+   ],
+   "to": [
+    14,
+    11,
+    13
+   ],
+   "faces": {
+    "north": {
+     "uv": [
+      0,
+      0,
+      16,
+      16
+     ],
+     "texture": "#poster"
+    }
+   }
+  }
+ ]
+}

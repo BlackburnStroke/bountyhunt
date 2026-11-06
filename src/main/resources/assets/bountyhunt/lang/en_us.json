@@ -1,0 +1,9 @@
+{
+  "block.bountyhunt.bounty_board": "Bounty Board",
+  "item.bountyhunt.hunting_compass": "Hunting Compass",
+  "item.bountyhunt.bounty_scroll_normal": "Normal Bounty Scroll",
+  "item.bountyhunt.bounty_scroll_medium": "Medium Bounty Scroll",
+  "item.bountyhunt.bounty_scroll_hard": "Hard Bounty Scroll",
+  "item.bountyhunt.bounty_scroll_legendary": "Legendary Bounty Scroll",
+  "entity.bountyhunt.bounty_zombie": "Bounty Zombie"
+}

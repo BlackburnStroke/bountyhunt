@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "bountyhunt",
+  "version": "${version}",
+  "name": "Minecraft Bounty Hunt",
+  "description": "A PvE bounty-hunting mod: bounty boards, hunting parties, scaled monsters and betrayal.",
+  "authors": ["Bounty Hunt Team"],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.bountyhunt.BountyHuntMod"],
+    "client": ["com.bountyhunt.client.BountyHuntClient"]
+  },
+  "mixins": ["bountyhunt.mixins.json"],
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*"
+  }
+}
