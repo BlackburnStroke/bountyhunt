@@ -16,7 +16,7 @@ import net.minecraft.world.World;
  * The bounty zombie: a vanilla zombie in behaviour, with its own model and loot per difficulty tier
  * (0 Normal, 1 Medium, 2 Hard, 3 Legendary). Stats, size and glow still come from MonsterScaling.
  */
-public class BountyZombieEntity extends ZombieEntity {
+public class BountyZombieEntity extends ZombieEntity implements BountyTiered {
 	private static final TrackedData<Integer> TIER = DataTracker.registerData(BountyZombieEntity.class, TrackedDataHandlerRegistry.INTEGER);
 
 	public BountyZombieEntity(EntityType<? extends ZombieEntity> type, World world) {
@@ -33,6 +33,7 @@ public class BountyZombieEntity extends ZombieEntity {
 		return this.dataTracker.get(TIER);
 	}
 
+	@Override
 	public void setTier(int tier) {
 		this.dataTracker.set(TIER, MathHelper.clamp(tier, 0, 3));
 	}

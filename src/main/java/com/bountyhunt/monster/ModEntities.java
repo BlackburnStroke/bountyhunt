@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityDimensions;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
+import net.minecraft.entity.mob.AbstractSkeletonEntity;
 import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -19,10 +20,18 @@ public final class ModEntities {
 					.trackRangeBlocks(96)
 					.build());
 
+	public static final EntityType<BountySkeletonEntity> BOUNTY_SKELETON = Registry.register(Registries.ENTITY_TYPE,
+			BountyHuntMod.id("bounty_skeleton"),
+			FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, BountySkeletonEntity::new)
+					.dimensions(EntityDimensions.fixed(0.6f, 1.99f))
+					.trackRangeBlocks(96)
+					.build());
+
 	private ModEntities() {
 	}
 
 	public static void register() {
 		FabricDefaultAttributeRegistry.register(BOUNTY_ZOMBIE, ZombieEntity.createZombieAttributes());
+		FabricDefaultAttributeRegistry.register(BOUNTY_SKELETON, AbstractSkeletonEntity.createAbstractSkeletonAttributes());
 	}
 }

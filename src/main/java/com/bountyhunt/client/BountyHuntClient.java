@@ -39,6 +39,7 @@ public class BountyHuntClient implements ClientModInitializer {
 		// Custom bounty monsters: one model per difficulty tier
 		MonsterModels.registerLayers();
 		EntityRendererRegistry.register(ModEntities.BOUNTY_ZOMBIE, BountyZombieRenderer::new);
+		EntityRendererRegistry.register(ModEntities.BOUNTY_SKELETON, BountySkeletonRenderer::new);
 
 		// Needle: the vanilla compass logic itself, pointed at the monster instead of world spawn.
 		CompassAnglePredicateProvider vanillaCompass = new CompassAnglePredicateProvider((world, stack, entity) -> CompassClient.target(world));

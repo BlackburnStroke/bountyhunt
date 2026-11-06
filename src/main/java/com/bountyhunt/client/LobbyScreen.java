@@ -3,7 +3,7 @@ package com.bountyhunt.client;
 import com.bountyhunt.util.Icons;
 import com.bountyhunt.hunt.HuntState;
 import com.bountyhunt.monster.BountyScaled;
-import com.bountyhunt.monster.BountyZombieEntity;
+import com.bountyhunt.monster.BountyTiered;
 import com.bountyhunt.monster.MonsterRegistry;
 import com.bountyhunt.network.LobbyAction;
 import com.bountyhunt.network.LobbySnapshot;
@@ -143,8 +143,8 @@ public class LobbyScreen extends Screen {
 			return;
 		}
 		Entity e = Registries.ENTITY_TYPE.get(MonsterRegistry.spawnType(modelType)).create(client.world);
-		if (e instanceof BountyZombieEntity zombie) {
-			zombie.setTier(snap.difficulty.ordinal()); // same model the real monster will have
+		if (e instanceof BountyTiered tiered) {
+			tiered.setTier(snap.difficulty.ordinal()); // same model the real monster will have
 		}
 		if (e instanceof LivingEntity living) {
 			model = living;

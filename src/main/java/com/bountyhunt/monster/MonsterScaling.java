@@ -23,8 +23,11 @@ public final class MonsterScaling {
 	private MonsterScaling() {
 	}
 
-	public static void apply(MobEntity mob, Bounty bounty) {
-		BountyDifficulty difficulty = bounty.difficulty;
+	/**
+	 * Applies the difficulty's stats, size, tier data, glow and behaviour to a freshly created mob.
+	 * Shared by bounty hunts and bounty spawn eggs. Does NOT tag or name the mob.
+	 */
+	public static void applyDifficulty(MobEntity mob, BountyDifficulty difficulty) {
 		double m = difficulty.statMultiplier();
 
 		EntityAttributeInstance health = mob.getAttributeInstance(EntityAttributes.GENERIC_MAX_HEALTH);
@@ -46,8 +49,8 @@ public final class MonsterScaling {
 		if (mob instanceof ZombieEntity zombie) {
 			zombie.setBaby(false);
 		}
-		if (mob instanceof BountyZombieEntity zombieModel) {
-			zombieModel.setTier(difficulty.ordinal()); // picks the model, texture and loot table
+		if (mob instanceof BountyTiered tiered) {
+			tiered.setTier(difficulty.ordinal()); // picks the model, texture and loot table
 		}
 		mob.setCanPickUpLoot(false);
 		mob.setPersistent();
@@ -60,6 +63,11 @@ public final class MonsterScaling {
 
 		// Permanent highlight (outline visible through walls). Duration -1 = infinite.
 		mob.addStatusEffect(new StatusEffectInstance(StatusEffects.GLOWING, -1, 0, false, false));
+	}
+
+	public static void apply(MobEntity mob, Bounty bounty) {
+		BountyDifficulty difficulty = bounty.difficulty;
+		applyDifficulty(mob, difficulty);
 
 		mob.addCommandTag(TAG);
 		mob.addCommandTag(ID_TAG_PREFIX + bounty.id);

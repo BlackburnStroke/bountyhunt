@@ -32,10 +32,13 @@ public final class MonsterRegistry {
 		return Registries.ENTITY_TYPE.getId(ELIGIBLE.get(random.nextInt(ELIGIBLE.size())));
 	}
 
-	/** The entity actually spawned for a bounty monster id: zombies are the custom bounty zombie, the rest are still vanilla. */
+	/** The entity actually spawned for a bounty monster id: zombie and skeleton are custom bounty monsters, the rest are still vanilla. */
 	public static Identifier spawnType(Identifier bountyType) {
 		if (bountyType.equals(new Identifier("zombie"))) {
 			return BountyHuntMod.id("bounty_zombie");
+		}
+		if (bountyType.equals(new Identifier("skeleton"))) {
+			return BountyHuntMod.id("bounty_skeleton");
 		}
 		return bountyType;
 	}
